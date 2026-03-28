@@ -3,6 +3,7 @@ import BuldingBrand from "./components/BuldingBrand";
 import NextSection from "./components/NextSection";
 import BusinessSolutions from "./components/BusinessSolutions";
 import JoinGalaxy from "./components/JoinGalaxy";
+import LaunchCTA from "./components/LaunchCTA";
 function App(){
   return(<>
     
@@ -11,6 +12,7 @@ function App(){
     <NextSection />
     <BusinessSolutions />
     <JoinGalaxy />
+    <LaunchCTA />
     </>
   )
 }

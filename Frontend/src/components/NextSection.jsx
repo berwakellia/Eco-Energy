@@ -12,12 +12,13 @@ export default function NextSection() {
            Why Partner With Us?
         </div>
         <h2 className="text-3xl md:text-5xl font-semibold leading-tight max-w-3xl mx-auto">
-          Unlock Infinite Possibilities for <br />
-          <span className="text-green-400">Your Business</span>
+          Unlock Infinite Possibilities by <br />
+          <span className="text-green-400">Eco-Energy</span>
         </h2>
         <p className="mt-4 text-gray-400 max-w-xl mx-auto text-sm md:text-base">
-          We help your business go beyond limits by providing innovative solutions,
-          futuristic strategies, and measurable results that make you shine among the stars.
+         By partnering with us, organizations can turn waste into a profitable resource,
+          producing sustainable fuel while contributing to environmental protection 
+         and meeting the increasing demand for clean, affordable energy solutions. We make it shine among the stars.
         </p>
       </div>
 
@@ -47,44 +48,48 @@ export default function NextSection() {
         {/* TOP LEFT CARD */}
         <div className="group relative bg-green-600/20 backdrop-blur-md border border-green-400/30 p-6 rounded-2xl md:text-left transition-all hover:border-green-400/60">
            <div className="flex justify-between items-start mb-4">
-             <h3 className="text-xl font-medium">Futuristic Strategies</h3>
+             <h3 className="text-xl font-medium">Proven and Practical Technology</h3>
              <span className="text-green-400">📊</span>
            </div>
            <p className="text-sm text-gray-300 leading-relaxed">
-             We craft smart, innovative strategies designed to keep your business ahead of the curve.
+             Our briquette production system is designed using reliable and tested engineering principles,
+              ensuring efficient conversion of agricultural waste into high-quality fuel.
            </p>
         </div>
 
         {/* TOP RIGHT CARD */}
         <div className="group relative bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl md:text-left hover:border-green-400/30 transition-all">
            <div className="flex justify-between items-start mb-4">
-             <h3 className="text-xl font-medium">Trusted Expertise</h3>
+             <h3 className="text-xl font-medium">Local Manufacturing Strength</h3>
              <span className="text-green-400 text-lg">💎</span>
            </div>
            <p className="text-sm text-gray-400 leading-relaxed">
-             With years of experience, we've partnered with 150+ global clients to deliver impactful results.
+            We leverage local materials and skills to build and maintain our machines, 
+            reducing costs, ensuring accessibility, and supporting local industry growth.
            </p>
         </div>
 
         {/* BOTTOM LEFT CARD */}
         <div className="group relative bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl md:text-left hover:border-green-400/30 transition-all">
            <div className="flex justify-between items-start mb-4">
-             <h3 className="text-xl font-medium">Creative Excellence</h3>
+             <h3 className="text-xl font-medium">Strong Market Demand</h3>
              <span className="text-green-400 text-lg">🎨</span>
            </div>
            <p className="text-sm text-gray-400 leading-relaxed">
-             From branding to user experience, we deliver creative solutions that captivate your audience.
+             The increasing need for clean, affordable energy creates a ready and growing market 
+             for briquettes, ensuring consistent demand and revenue opportunities.
            </p>
         </div>
 
         {/* BOTTOM RIGHT CARD */}
         <div className="group relative bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl md:text-left hover:border-green-400/30 transition-all">
            <div className="flex justify-between items-start mb-4">
-             <h3 className="text-xl font-medium">Scalable Growth</h3>
+             <h3 className="text-xl font-medium">Sustainable and Scalable Model</h3>
              <span className="text-green-400 text-lg">📈</span>
            </div>
            <p className="text-sm text-gray-400 leading-relaxed">
-             We help your business scale rapidly while maintaining sustainable growth in competitive markets.
+            Our solution is environmentally friendly and easily scalable, allowing partners to expand production and 
+            increase profits while contributing to a greener future.
            </p>
         </div>
 

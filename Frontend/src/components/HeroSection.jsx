@@ -1,3 +1,6 @@
+import WaterEnergyWasste from "../../public/WaterEnergyWaste.png"
+import Machine from "../../public/Machine.jpg"
+import Sustainable from "../../public/Sustainable.png"
 export default function HeroSection() {
   return (
     <div className="relative bg-[#020617] text-white overflow-hidden min-h-screen flex flex-col justify-center items-center px-6">
@@ -15,8 +18,8 @@ export default function HeroSection() {
 
       {/* Main Heading */}
       <h1 className="text-4xl md:text-6xl font-bold text-center leading-tight">
-        Shaping the Future of <br />
-        <span className="text-green-500">Business Innovation</span>
+        Engineering technology that  <br />
+        <span className="text-green-500"> converts agricultural waste into clean and affordable fuel </span>
       </h1>
 
       {/* Stats Cards */}
@@ -25,33 +28,33 @@ export default function HeroSection() {
         {/* Card 1 */}
         <div className="flex items-center gap-4 px-8 py-6 border-b md:border-b-0 md:border-r border-white/10">
           <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-            💰
+            <img src={Sustainable} className="w-10 h-10 bg-green-500/20 rounded-full"  />
           </div>
           <div>
-            <h2 className="text-xl font-semibold">10+</h2>
-            <p className="text-sm text-gray-400">Years of Experience</p>
+            <h2 className="text-xl font-semibold">100%</h2>
+            <p className="text-sm text-gray-400">Sustainable Energy <br /> Technology</p>
           </div>
         </div>
 
         {/* Card 2 */}
         <div className="flex items-center gap-4 px-8 py-6 border-b md:border-b-0 md:border-r border-white/10">
           <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-            🔗
+            <img src={Machine} className="w-10 h-10 bg-green-500/20 rounded-full"  />
           </div>
           <div>
-            <h2 className="text-xl font-semibold">250+</h2>
-            <p className="text-sm text-gray-400">Successful Projects</p>
+            <h2 className="text-xl font-semibold">100%</h2>
+            <p className="text-sm text-gray-400">Machine Manufacturing and <br /> Innovation</p>
           </div>
         </div>
 
         {/* Card 3 */}
         <div className="flex items-center gap-4 px-8 py-6">
           <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-            🧠
+            <img src={WaterEnergyWasste} className="w-10 h-10 bg-green-500/20 rounded-full"  />
           </div>
           <div>
-            <h2 className="text-xl font-semibold">300%</h2>
-            <p className="text-sm text-gray-400">Return on Investment</p>
+            <h2 className="text-xl font-semibold">100%</h2>
+            <p className="text-sm text-gray-400">Waste-to-Energy & Youth <br />Development</p>
           </div>
         </div>
 
@@ -59,8 +62,10 @@ export default function HeroSection() {
 
       {/* Bottom Text */}
       <p className="mt-10 text-gray-400 text-center max-w-xl text-sm">
-        We craft visionary solutions and powerful strategies to help your brand
-        shine brighter in an ever-evolving digital universe.
+        Eco-Energy is a smart briquette production solution that converts 
+        agricultural waste into clean fuel, reducing waste,
+         lowering emissions, and promoting sustainable energy for communities.
+
       </p>
 
       {/* Explore More */}

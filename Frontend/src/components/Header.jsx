@@ -67,7 +67,6 @@ function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-2 border-t pt-4">
             {navLinks.map((link) => (

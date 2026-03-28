@@ -5,20 +5,20 @@ export default function BuildingBrand() {
       {/* 1. Badge */}
       <div className="z-10 mb-6 px-4 py-1.5 bg-green-500/10 text-green-400 rounded-md text-[10px] uppercase tracking-[0.2em] border border-green-500/20 backdrop-blur-sm flex items-center gap-2">
         <span className="w-3 h-3 border border-green-400/50 rotate-45 flex items-center justify-center text-[8px]">✧</span>
-        Your Growth, Our Galaxy
+        Our Growth, Our Galaxy
       </div>
 
       {/* 2. Heading */}
       <h1 className="z-10 text-4xl md:text-6xl font-semibold text-center leading-tight max-w-4xl tracking-tight">
-        Building Brands That Shine <br />
+      Impact-Focused Version <br />
         <span className="text-green-400">Among the Stars</span>
       </h1>
 
       {/* 3. Description */}
       <p className="z-10 mt-6 text-gray-400 text-center max-w-2xl text-sm md:text-base leading-relaxed opacity-80">
-        From bold strategies to cutting-edge technology, we guide companies
-        through uncharted territories and unlock limitless possibilities for
-        their success.
+      We deliver an affordable and locally manufacturable briquette production system that transforms 
+      waste into clean energy, 
+      promoting sustainability and eco-friendly fuel solutions.This solution will be appeared in galaxy
       </p>
 
       {/* 4. Globe Effect Container */}

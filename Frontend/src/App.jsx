@@ -1,8 +1,11 @@
 import HeroSection from "./components/HeroSection"
+import BuldingBrand from "./components/BuldingBrand";
 function App(){
-  return(
+  return(<>
     
     <HeroSection />
+    <BuldingBrand />
+    </>
   )
 }
 export default App;

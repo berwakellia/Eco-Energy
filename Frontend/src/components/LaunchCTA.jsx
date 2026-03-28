@@ -1,12 +1,12 @@
 export default function LaunchCTA() {
   return (
-    <div className="relative bg-[#020617] text-white py-16 md:py-24 flex items-center justify-center overflow-hidden">
+    <div className="relative bg-[#020617] text-white py-20 md:py-28 flex items-center justify-center overflow-hidden">
 
-      {/* Bottom Curve Glow */}
-      <div className="absolute bottom-[-120px] w-[120%] h-[250px] md:h-[300px] bg-green-500/20 blur-[80px] rounded-[50%]"></div>
+      {/* Top Glow (for downward curve effect) */}
+      <div className="absolute top-[-200px] w-[140%] h-[300px] md:h-[400px] bg-green-500/20 blur-[100px] rounded-[50%]"></div>
 
-      {/* Thin arc line */}
-      <div className="absolute bottom-[-60px] w-[120%] h-[200px] md:h-[240px] border-t border-green-400/30 rounded-[50%]"></div>
+      {/* Inverted Arc Line */}
+      <div className="absolute top-[-140px] w-[140%] h-[260px] md:h-[320px] border-b border-green-400/40 rounded-[50%]"></div>
 
       {/* Center Glow */}
       <div className="absolute w-[200px] h-[200px] bg-green-500/10 blur-[100px] rounded-full"></div>
@@ -14,7 +14,7 @@ export default function LaunchCTA() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-2xl">
 
-        {/* Icon Circle */}
+        {/* Icon */}
         <div className="mx-auto mb-6 w-14 h-14 flex items-center justify-center rounded-full bg-green-500/20 border border-green-400/40 shadow-[0_0_25px_rgba(34,197,94,0.7)]">
           🚀
         </div>

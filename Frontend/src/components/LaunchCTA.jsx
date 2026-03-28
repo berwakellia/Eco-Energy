@@ -1,15 +1,15 @@
 export default function LaunchCTA() {
   return (
-    <div className="relative bg-[#020617] text-white py-20 md:py-28 flex items-center justify-center overflow-hidden">
+    <div className="relative bg-[#020617] text-white py-12 md:py-16 flex items-center justify-center overflow-hidden">
 
       {/* Top Glow (for downward curve effect) */}
       <div className="absolute top-[-200px] w-[140%] h-[300px] md:h-[400px] bg-green-500/20 blur-[100px] rounded-[50%]"></div>
 
-      {/* Inverted Arc Line */}
-      <div className="absolute top-[-140px] w-[140%] h-[260px] md:h-[320px] border-b border-green-400/40 rounded-[50%]"></div>
+      {/* Inverted Arc Line (moved BELOW everything) */}
+      <div className="absolute top-[120px] w-[140%] h-[260px] md:h-[320px] border-b border-green-400/40 rounded-[50%]"></div>
 
       {/* Center Glow */}
-      <div className="absolute w-[200px] h-[200px] bg-green-500/10 blur-[100px] rounded-full"></div>
+      <div className="absolute w-[200px] h-[200px] bg-green-500/10 blur-[100px] rounded"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-2xl">

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         {/* Main Content */}
         <main className="grow">
           <Routes>
-            <Route path="/" element={<h1>the home page</h1>} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<h1>the about page</h1>} />
             <Route path="/features" element={<h1>the features page</h1>} />
             <Route path="/how-it-works" element={<h1>the HowItWorks page</h1>} />

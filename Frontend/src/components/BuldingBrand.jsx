@@ -52,11 +52,11 @@ export default function BuildingBrand() {
       {/* 5. Logos (Now positioned to overlap the bottom of the globe) */}
       <div className="relative -mt-20 z-20 w-full max-w-5xl">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
-          <span className="text-xl md:text-2xl font-bold tracking-tighter">amana</span>
+          <span className="text-xl md:text-2xl font-bold tracking-tighter">Twitter</span>
           <span className="text-lg md:text-xl font-extrabold">NTT DATA</span>
           <span className="text-lg md:text-xl font-semibold italic">Google</span>
-          <span className="text-xl md:text-2xl font-serif tracking-widest">ORACLE</span>
-          <span className="text-lg md:text-xl font-black">slack</span>
+          <span className="text-xl md:text-2xl font-serif tracking-widest">linked-in</span>
+          <span className="text-lg md:text-xl font-black">email</span>
           <span className="text-lg md:text-xl font-bold flex items-center gap-1">
              <div className="w-5 h-5 bg-gray-400 rounded-sm"></div> discord
           </span>

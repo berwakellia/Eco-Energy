@@ -38,7 +38,7 @@ export default function NextSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-green-500 blur-3xl opacity-30 rounded-full scale-150"></div>
             <div className="w-16 h-16 bg-black border border-green-500/50 rounded-full flex items-center justify-center z-20 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
-               <div className="w-8 h-8 border-2 border-green-400 rounded-full flex items-center justify-center">
+               <div className="w-8 h-8 border-2 border-green-400 rounded-full flex items-center justify-center"><img src="/ecoIcon.png" className="object-contain mt-3" />
                  <div className="w-4 h-[2px] bg-green-400 rotate-45"></div>
                </div>
             </div>

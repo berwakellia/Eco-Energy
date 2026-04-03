@@ -1,214 +1,122 @@
-// const data = [
-//   {
-//     title: 'Strategic Planning',
-//     desc: 'Tailored strategies to help you navigate challenges and seize new opportunities.',
-//     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
-//   },
-//   {
-//     title: 'Brand Development',
-//     desc: 'We build powerful brands that stand out and connect deeply with your audience.',
-//     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
-//   },
-//   {
-//     title: 'Growth Marketing',
-//     desc: 'Boost your visibility and engagement through data-driven campaigns.',
-//     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
-//   },
-//   {
-//     title: 'Insights & Analytics',
-//     desc: 'We provide deep insights to help you understand your audience and competitors better.',
-//     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
-//   },
-// ];
-
-// export default function BusinessSolutions() {
-//   return (
-//     <section className="relative bg-[#020617] text-white overflow-hidden min-h-screen flex flex-col items-center pt-24 pb-20 px-6 md:px-12">
-      
-//       {/* 1. Badge */}
-//       <div className="z-10 mb-6 px-4 py-1.5 bg-green-500/10 text-green-400 rounded-md text-[10px] uppercase tracking-[0.2em] border border-green-500/20 backdrop-blur-sm flex items-center gap-2">
-//         <span className="w-3 h-3 border border-green-400/50 rotate-45 flex items-center justify-center text-[8px]">✦</span>
-//         Our Galaxy, Your Success
-//       </div>
-
-//       {/* 2. Heading */}
-//       <h2 className="z-10 text-4xl md:text-6xl font-semibold text-center leading-tight max-w-4xl tracking-tight">
-//         Innovative Solutions to Accelerate <br />
-//         <span className="text-green-400">Your Business</span>
-//       </h2>
-
-//       {/* 3. Description */}
-//       <p className="z-10 mt-6 text-gray-400 text-center max-w-2xl text-sm md:text-base leading-relaxed opacity-80">
-//         From branding to digital transformation, we craft strategies and solutions that launch your business into a new orbit of success.
-//       </p>
-
-//       {/* 4. Responsive Card Grid */}
-//       <div className="relative mt-16 w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 z-20">
-        
-//         {data.map((item, index) => {
-//           const isHighlighted = index === 0;
-//           return (
-//             <div 
-//               key={index} 
-//               className={`group relative flex flex-col p-6 rounded-3xl border transition-all duration-300 hover:scale-[1.03] ${
-//                 isHighlighted 
-//                   ? 'bg-blue-600 border-blue-400/50 shadow-[0_20px_60px_-10px_rgba(30,64,175,0.4)]' 
-//                   : 'bg-white/5 border-white/10 hover:border-green-400/30'
-//               }`}
-//             >
-              
-//               {/* Text Area */}
-//               <div className="flex-1 pb-4">
-//                 <h3 className={`text-xl md:text-2xl font-medium mb-3 ${isHighlighted ? 'text-white' : 'text-green-50'}`}>
-//                   {item.title}
-//                 </h3>
-//                 <p className={`text-sm leading-relaxed ${isHighlighted ? 'text-blue-100' : 'text-gray-400'}`}>
-//                   {item.desc}
-//                 </p>
-//               </div>
-
-//               {/* Image and Button Container */}
-//               <div className="relative mt-4 w-full h-[180px] overflow-hidden rounded-2xl">
-                
-//                 {/* 5. FIXED: Using standard img tag for Vite compatibility */}
-//                 <img 
-//                   src={item.img} 
-//                   alt={item.title} 
-//                   className={`absolute bottom-[-10%] left-[-10%] w-[120%] h-[120%] object-contain scale-110 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-100 ${
-//                     isHighlighted ? 'opacity-90 grayscale-0' : 'opacity-40'
-//                   }`}
-//                 />
-
-//                 {/* Learn More Button */}
-//                 <button 
-//                   className={`absolute bottom-4 left-4 z-10 px-5 py-2 rounded-full text-xs flex items-center gap-2 transition-colors ${
-//                     isHighlighted 
-//                       ? 'bg-blue-800 text-white border border-blue-400/30 hover:bg-blue-900' 
-//                       : 'bg-white/5 text-gray-300 border border-white/10 hover:border-green-400/30 hover:text-green-300'
-//                   }`}
-//                 >
-//                   Learn more
-//                   <span className="text-sm">→</span>
-//                 </button>
-//               </div>
-
-//               {/* Decorative Corner Lights */}
-//               <div className="absolute top-0 right-0 w-12 h-12 bg-white/5 rounded-tr-3xl rounded-bl-3xl border-l border-b border-white/10"></div>
-//               <div className="absolute top-2 right-2 w-1.5 h-1.5 bg-green-400/40 rounded-full"></div>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </section>
-//   );
-// }
+import React, { useState, useEffect } from 'react';
 
 const data = [
   {
-    title: 'Strategic Planning',
-    desc: 'Tailored strategies to help you navigate challenges and seize new opportunities.',
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    title: 'Integrated Briquette Production Technology',
+    desc: 'Eco-Energy delivers a fully integrated, all-in-one engineering solution that seamlessly bridges biomass carbonization, material mixing, and mechanical compression.',
+    img: ['/machine1.jpg', '/machine2.jpg', '/machine3.jpg'],
   },
   {
-    title: 'Brand Development',
-    desc: 'We build powerful brands that stand out and connect deeply with your audience.',
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    title: 'Affordable & Scalable for Entrepreneurs',
+    desc: 'Designed with local impact in mind, Eco-Energy offers a low-cost, high-yield solution tailored specifically for small and medium enterprises.',
+    img: ['/afforadable1.jpg', '/afforadable2.jpg', '/afforadable3.jpg'],
   },
   {
-    title: 'Growth Marketing',
-    desc: 'Boost your visibility and engagement through data-driven campaigns.',
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    title: 'Environmental Sustainability & Waste Recycling',
+    desc: `Eco-Energy creates a circular economy by transforming agricultural waste—such as husks, sawdust, and residues—into clean-burning briquettes.`,
+    img: ['/environement3.jpg', '/environement2.jpg', '/environement1.jpg'],
   },
   {
-    title: 'Insights & Analytics',
-    desc: 'We provide deep insights to help you understand your audience and competitors better.',
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    title: 'Job Creation & Economic Impact',
+    desc: "Eco-Energy acts as a catalyst for regional industrialization by fostering a robust value chain. Our system creates a multi-tiered economic impact.",
+    img: ['/job1.jpg', '/job2.jpg', '/job3.jpg'],
   },
 ];
 
+// Sub-component for individual cards to manage their own timer
+const SolutionCard = ({ item, isHighlighted }) => {
+  const [currentImg, setCurrentImg] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % item.img.length);
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(timer);
+  }, [item.img.length]);
+
+  return (
+    <div className={`group relative flex flex-col h-full p-6 rounded-3xl border transition-all duration-500 hover:scale-[1.02] ${
+      isHighlighted 
+        ? 'bg-gradient-to-br from-emerald-600 to-green-800 border-emerald-400/50 shadow-[0_20px_50px_-10px_rgba(16,185,129,3.3)]' 
+        : 'bg-[#030712] backdrop-blur-md border-white/5 hover:border-emerald-500/40'
+    }`}>
+      
+      <div className="flex-1 pb-6">
+        <h3 className={`text-xl font-semibold mb-3 ${isHighlighted ? 'text-white' : 'text-emerald-50'}`}>
+          {item.title}
+        </h3>
+        <p className={`text-sm leading-relaxed ${isHighlighted ? 'text-emerald-50/90' : 'text-emerald-100/50'}`}>
+          {item.desc}
+        </p>
+      </div>
+
+      <div className="relative mt-auto w-full h-[220px] overflow-hidden rounded-2xl bg-black/40">
+        {item.img.map((src, idx) => (
+          <img 
+            key={idx}
+            src={src} 
+            alt={item.title} 
+            className={`absolute bottom-[-5%] right-[-5%] w-[90%] h-[90%] object-contain transition-all duration-1000 ease-in-out
+              ${idx === currentImg 
+                ? 'opacity-100 translate-x-0 scale-100' 
+                : 'opacity-4 translate-x-10 scale-95'}
+              group-hover:translate-x-[-8%] group-hover:translate-y-[-8%] group-hover:scale-110
+              ${isHighlighted ? 'brightness-110' : 'grayscale group-hover:grayscale-0 opacity-40 group-hover:opacity-100'}
+            `}
+          />
+        ))}
+
+        {/* Progress Dots */}
+        <div className="absolute top-4 right-4 flex gap-1.5 z-20">
+          {item.img.map((_, idx) => (
+            <div 
+              key={idx}
+              className={`h-1 rounded-full transition-all duration-500 ${
+                idx === currentImg ? 'w-4 bg-emerald-400' : 'w-1 bg-white/20'
+              }`}
+            />
+          ))}
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-r from-[#020617]/80 via-transparent to-transparent pointer-events-none"></div>
+
+        <button className={`absolute bottom-4 left-4 z-10 px-5 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 transition-all ${
+          isHighlighted 
+            ? 'bg-white text-emerald-900' 
+            : 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 hover:bg-emerald-400 hover:text-black'
+        }`}>
+          Learn More <span>→</span>
+        </button>
+      </div>
+
+      <div className={`absolute top-0 right-0 w-12 h-12 rounded-tr-3xl rounded-bl-3xl border-l border-b ${isHighlighted ? 'border-white/10 bg-white/5' : 'border-white/5 bg-white/[0.02]'}`}></div>
+      <div className={`absolute top-3 right-3 w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-white animate-pulse' : 'bg-emerald-500/40'}`}></div>
+    </div>
+  );
+};
+
 export default function BusinessSolutions() {
   return (
-    // Updated background to a very deep forest green
     <section className="relative bg-[#020617] text-white overflow-hidden min-h-screen flex flex-col items-center pt-24 pb-20 px-6 md:px-12">
-      
-      {/* Dynamic Glow Background */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-green-500/10 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-500/10 blur-[120px] rounded-full"></div>
 
-      {/* 1. Badge */}
       <div className="z-10 mb-6 px-4 py-1.5 bg-emerald-500/10 text-emerald-400 rounded-md text-[10px] uppercase tracking-[0.2em] border border-emerald-500/20 backdrop-blur-sm flex items-center gap-2">
         <span className="w-3 h-3 border border-emerald-400/50 rotate-45 flex items-center justify-center text-[8px]">✦</span>
         Our Galaxy, Your Success
       </div>
 
-      {/* 2. Heading */}
       <h2 className="z-10 text-4xl md:text-6xl font-semibold text-center leading-tight max-w-4xl tracking-tight">
         Innovative Solutions to Accelerate <br />
         <span className="text-emerald-400">Your Business</span>
       </h2>
 
-      {/* 3. Description */}
-      <p className="z-10 mt-6 text-emerald-100/60 text-center max-w-2xl text-sm md:text-base leading-relaxed">
-        From branding to digital transformation, we craft strategies and solutions that launch your business into a new orbit of success.
-      </p>
-
-      {/* 4. Responsive Card Grid */}
       <div className="relative mt-16 w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 z-20">
-        
-        {data.map((item, index) => {
-          const isHighlighted = index === 0;
-          return (
-            <div 
-              key={index} 
-              className={`group relative flex flex-col p-6 rounded-3xl border transition-all duration-500 hover:scale-[1.02] ${
-                isHighlighted 
-                  ? 'bg-gradient-to-br from-emerald-600 to-green-800 border-emerald-400/50 shadow-[0_20px_50px_-10px_rgba(16,185,129,0.3)]' 
-                  : 'bg-[#020617] backdrop-blur-md border-white/5 hover:border-emerald-500/40'
-              }`}
-            >
-              
-              {/* Text Area */}
-              <div className="flex-1 pb-4">
-                <h3 className={`text-xl md:text-2xl font-medium mb-3 ${isHighlighted ? 'text-white' : 'text-emerald-50'}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${isHighlighted ? 'text-emerald-50/90' : 'text-emerald-100/50'}`}>
-                  {item.desc}
-                </p>
-              </div>
-
-              {/* Image and Button Container */}
-              <div className="relative mt-4 w-full h-[180px] overflow-hidden rounded-2xl bg-black/20">
-                
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className={`absolute bottom-[-10%] left-[-10%] w-[120%] h-[120%] object-contain scale-110 transition-all duration-700 ${
-                    isHighlighted ? 'opacity-100 brightness-110' : 'opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-70 group-hover:scale-100'
-                  }`}
-                />
-
-                {/* Learn More Button */}
-                <button 
-                  className={`absolute bottom-4 left-4 z-10 px-5 py-2 rounded-full text-[11px] font-medium flex items-center gap-2 transition-all ${
-                    isHighlighted 
-                      ? 'bg-white text-emerald-900 hover:bg-emerald-50' 
-                      : 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 hover:bg-emerald-500 hover:text-white'
-                  }`}
-                >
-                  Learn more
-                  <span className="text-sm">→</span>
-                </button>
-              </div>
-
-              {/* Decorative Corner Details */}
-              <div className={`absolute top-0 right-0 w-12 h-12 rounded-tr-3xl rounded-bl-3xl border-l border-b ${isHighlighted ? 'border-white/10 bg-white/5' : 'border-white/5 bg-white/[0.02]'}`}></div>
-              <div className={`absolute top-3 right-3 w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-white animate-pulse' : 'bg-emerald-500/40'}`}></div>
-            </div>
-          );
-        })}
+        {data.map((item, index) => (
+          <SolutionCard key={index} item={item} isHighlighted={index === 0} />
+        ))}
       </div>
-
     </section>
   );
 }

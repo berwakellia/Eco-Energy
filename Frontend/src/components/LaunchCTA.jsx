@@ -16,18 +16,18 @@ export default function LaunchCTA() {
 
         {/* Icon */}
         <div className="mx-auto mb-6 w-14 h-14 flex items-center justify-center rounded-full bg-green-500/20 border border-green-400/40 shadow-[0_0_25px_rgba(34,197,94,0.7)]">
-          🚀
+         <img src="/ecoIcon.png" alt=""  className="h-full w-full mt-3 object-contain" />
         </div>
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
-          Let’s Launch Your Business <br />
+          Let’s Launch growth Business <br />
           <span className="text-green-400">Into a New Orbit</span>
         </h2>
 
         {/* Description */}
         <p className="mt-4 text-sm md:text-base text-gray-300">
-          Partner with us to build futuristic experiences, unlock growth, and take your business
+          Partner with us to build futuristic experiences, unlock growth, and take our business
           to the next level of innovation.
         </p>
 

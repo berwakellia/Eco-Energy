@@ -1,29 +1,30 @@
+import React from 'react';
+
 const data = [
   {
     title: 'Integrated Briquette Production Technology',
-    desc: 'Eco-Energy delivers a fully integrated, all-in-one engineering solution that seamlessly bridges biomass carbonization, material mixing, and mechanical compression. By unifying these stages into a single high-efficiency system, we eliminate the need for fragmented machinery—drastically reducing operational complexity and overhead costs for growing businesses.',
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    desc: 'Eco-Energy delivers a fully integrated, all-in-one engineering solution that seamlessly bridges biomass carbonization, material mixing, and mechanical compression. By unifying these stages into a single high-efficiency system, we eliminate the need for fragmented machinery.',
+    img: '/your-local-image-1.png', // Replace with your local path
   },
   {
     title: 'Affordable & Scalable for Entrepreneurs',
-    desc: 'Designed with local impact in mind, Eco-Energy offers a low-cost, high-yield solution tailored specifically for small and medium enterprises. By lowering the barrier to entry, our system empowers individuals and cooperatives to launch their own production lines with ease. We don’t just sell machinery; we provide an accessible gateway to entrepreneurship that scales alongside your ambition, driving sustainable economic growth from the ground up.',
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    desc: 'Designed with local impact in mind, Eco-Energy offers a low-cost, high-yield solution tailored specifically for small and medium enterprises. By lowering the barrier to entry, our system empowers individuals and cooperatives to launch their own production lines.',
+    img: '/your-local-image-2.png',
   },
   {
     title: 'Environmental Sustainability & Waste Recycling',
-    desc: `Eco-Energy creates a circular economy by transforming agricultural waste—such as husks, sawdust, and residues—into high-performance, clean-burning briquettes. By diverting waste from landfills and reducing reliance on traditional fuels, our system directly lowers greenhouse gas emissions and mitigates pollution. We aren't just processing waste; we are pioneering a cleaner energy future.`,
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    desc: `Eco-Energy creates a circular economy by transforming agricultural waste—such as husks, sawdust, and residues—into high-performance, clean-burning briquettes. By diverting waste from landfills, our system directly lowers greenhouse gas emissions.`,
+    img: '/your-local-image-3.png',
   },
   {
     title: 'Job Creation & Economic Impact',
-    desc: "Eco-Energy acts as a catalyst for regional industrialization by fostering a robust value chain. Our system creates a multi-tiered economic impact: from the precision engineering of machine manufacturing to the high-demand sector of briquette production and the subsequent logistics and retail networks. This ecosystem doesn't just build industry; it provides a sustainable pathway for youth employment and bolsters community-wide financial resilience.",
-    img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
+    desc: "Eco-Energy acts as a catalyst for regional industrialization by fostering a robust value chain. Our system creates a multi-tiered economic impact: from the precision engineering of machine manufacturing to the high-demand sector of briquette production.",
+    img: '/your-local-image-4.png',
   },
 ];
 
 export default function BusinessSolutions() {
   return (
-    // Updated background to a very deep forest green
     <section className="relative bg-[#020617] text-white overflow-hidden min-h-screen flex flex-col items-center pt-24 pb-20 px-6 md:px-12">
       
       {/* Dynamic Glow Background */}
@@ -44,9 +45,8 @@ export default function BusinessSolutions() {
 
       {/* 3. Description */}
       <p className="z-10 mt-6 text-emerald-100/60 text-center max-w-2xl text-sm md:text-base leading-relaxed">
-       Eco-Energy provides an integrated, affordable briquette production solution that transforms 
-       agricultural waste into clean fuel. The system reduces environmental impact, supports entrepreneurship, and creates sustainable
-        job opportunities, making it both an economic and ecological solution.
+        Eco-Energy provides an integrated, affordable briquette production solution that transforms 
+        agricultural waste into clean fuel.
       </p>
 
       {/* 4. Responsive Card Grid */}
@@ -57,16 +57,16 @@ export default function BusinessSolutions() {
           return (
             <div 
               key={index} 
-              className={`group relative flex flex-col p-6 rounded-3xl border transition-all duration-500 hover:scale-[1.02] ${
+              className={`group relative flex flex-col h-full p-6 rounded-3xl border transition-all duration-500 hover:scale-[1.02] ${
                 isHighlighted 
                   ? 'bg-gradient-to-br from-emerald-600 to-green-800 border-emerald-400/50 shadow-[0_20px_50px_-10px_rgba(16,185,129,0.3)]' 
-                  : 'bg-[#020617] backdrop-blur-md border-white/5 hover:border-emerald-500/40'
+                  : 'bg-[#030712] backdrop-blur-md border-white/5 hover:border-emerald-500/40'
               }`}
             >
               
-              {/* Text Area */}
-              <div className="flex-1 pb-4">
-                <h3 className={`text-xl md:text-2xl font-medium mb-3 ${isHighlighted ? 'text-white' : 'text-emerald-50'}`}>
+              {/* Text Area - flex-1 ensures this pushes the image container to the bottom */}
+              <div className="flex-1 pb-6">
+                <h3 className={`text-xl font-semibold mb-3 ${isHighlighted ? 'text-white' : 'text-emerald-50'}`}>
                   {item.title}
                 </h3>
                 <p className={`text-sm leading-relaxed ${isHighlighted ? 'text-emerald-50/90' : 'text-emerald-100/50'}`}>
@@ -75,25 +75,27 @@ export default function BusinessSolutions() {
               </div>
 
               {/* Image and Button Container */}
-              <div className="relative mt-4 w-full h-[180px] overflow-hidden rounded-2xl bg-black/20">
+              <div className="relative mt-auto w-full h-[200px] overflow-hidden rounded-2xl bg-black/20">
                 
+                {/* The Sliding Image Logic */}
                 <img 
                   src={item.img} 
                   alt={item.title} 
-                  className={`absolute bottom-[-10%] left-[-10%] w-[120%] h-[120%] object-contain scale-110 transition-all duration-700 ${
-                    isHighlighted ? 'opacity-100 brightness-110' : 'opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-70 group-hover:scale-100'
-                  }`}
+                  className={`absolute bottom-2 right-[-20%] w-[90%] h-[90%] object-contain transition-all duration-700 ease-out 
+                    group-hover:translate-x-[-15%] group-hover:scale-110
+                    ${isHighlighted ? 'opacity-100 brightness-110' : 'opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100'}
+                  `}
                 />
 
                 {/* Learn More Button */}
                 <button 
-                  className={`absolute bottom-4 left-4 z-10 px-5 py-2 rounded-full text-[11px] font-medium flex items-center gap-2 transition-all ${
+                  className={`absolute bottom-4 left-4 z-10 px-5 py-2 rounded-full text-[11px] font-bold flex items-center gap-2 transition-all ${
                     isHighlighted 
                       ? 'bg-white text-emerald-900 hover:bg-emerald-50' 
                       : 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 hover:bg-emerald-500 hover:text-white'
                   }`}
                 >
-                  Learn more
+                  LEARN MORE
                   <span className="text-sm">→</span>
                 </button>
               </div>
@@ -105,7 +107,6 @@ export default function BusinessSolutions() {
           );
         })}
       </div>
-
     </section>
   );
 }

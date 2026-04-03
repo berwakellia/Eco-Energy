@@ -4,22 +4,22 @@ const data = [
   {
     title: 'Integrated Briquette Production Technology',
     desc: 'Eco-Energy delivers a fully integrated, all-in-one engineering solution that seamlessly bridges biomass carbonization, material mixing, and mechanical compression. By unifying these stages into a single high-efficiency system, we eliminate the need for fragmented machinery.',
-    img: '/machine1.jpg', // Replace with your local path
+    img: ['/machine1.jpg','/machine2.jpg','/machine3.jpg',] // Replace with your local path
   },
   {
     title: 'Affordable & Scalable for Entrepreneurs',
     desc: 'Designed with local impact in mind, Eco-Energy offers a low-cost, high-yield solution tailored specifically for small and medium enterprises. By lowering the barrier to entry, our system empowers individuals and cooperatives to launch their own production lines.',
-    img: '/afforadable1.jpg',
+    img: ['/afforadable1.jpg','/afforadable2.jpg','/afforadable3.jpg']
   },
   {
     title: 'Environmental Sustainability & Waste Recycling',
     desc: `Eco-Energy creates a circular economy by transforming agricultural waste—such as husks, sawdust, and residues—into high-performance, clean-burning briquettes. By diverting waste from landfills, our system directly lowers greenhouse gas emissions.`,
-    img: '/environement3.jpg',
+    img: ['/environement3.jpg','/environement2.jpg','/environement1.jpg',]
   },
   {
     title: 'Job Creation & Economic Impact',
     desc: "Eco-Energy acts as a catalyst for regional industrialization by fostering a robust value chain. Our system creates a multi-tiered economic impact: from the precision engineering of machine manufacturing to the high-demand sector of briquette production.",
-    img: '/job1.jpg',
+    img: ['/job1.jpg','/job2.jpg','/job3.jpg'],
   },
 ];
 
@@ -75,30 +75,42 @@ export default function BusinessSolutions() {
               </div>
 
               {/* Image and Button Container */}
-              <div className="relative mt-auto w-full h-[200px] overflow-hidden rounded-2xl bg-black/20">
-                
-                {/* The Sliding Image Logic */}
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className={`absolute bottom-2 right-[-20%] w-[90%] h-[90%] object-contain transition-all duration-700 ease-out 
-                    group-hover:translate-x-[-15%] group-hover:scale-110
-                    ${isHighlighted ? 'opacity-100 brightness-110' : 'opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100'}
-                  `}
-                />
+              <div className="relative mt-auto w-full h-[220px] overflow-hidden rounded-2xl bg-gradient-to-t from-black/40 to-transparent">
+  
+  {/* The Sliding Image Logic */}
+  <img 
+    src={item.img[0]} 
+    alt={item.title} 
+    className={`absolute transition-all duration-700 ease-out 
+      /* Desktop/Default Position: Bottom Right and slightly tucked away */
+      bottom-[-10%] right-[-10%] w-[85%] h-[85%] object-contain 
+      
+      /* Hover State: Slides up and left into view */
+      group-hover:translate-x-[-8%] group-hover:translate-y-[-8%] group-hover:scale-110
+      
+      /* Visual Polish */
+      ${isHighlighted 
+        ? 'opacity-100 brightness-110 drop-shadow-[0_10px_20px_rgba(16,185,129,0.4)]' 
+        : 'opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100'
+      }
+    `}
+  />
 
-                {/* Learn More Button */}
-                <button 
-                  className={`absolute bottom-4 left-4 z-10 px-5 py-2 rounded-full text-[11px] font-bold flex items-center gap-2 transition-all ${
-                    isHighlighted 
-                      ? 'bg-white text-emerald-900 hover:bg-emerald-50' 
-                      : 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 hover:bg-emerald-500 hover:text-white'
-                  }`}
-                >
-                  LEARN MORE
-                  <span className="text-sm">→</span>
-                </button>
-              </div>
+  {/* Gradient Overlay to ensure text/button readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#020617]/80 via-transparent to-transparent pointer-events-none"></div>
+
+  {/* Learn More Button */}
+  <button 
+    className={`absolute bottom-4 left-4 z-10 px-5 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold flex items-center gap-2 transition-all ${
+      isHighlighted 
+        ? 'bg-white text-emerald-900 shadow-lg hover:px-7' 
+        : 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 hover:bg-emerald-400 hover:text-black'
+    }`}
+  >
+    Learn More
+    <span className="text-base transition-transform group-hover:translate-x-1">→</span>
+  </button>
+</div>
 
               {/* Decorative Corner Details */}
               <div className={`absolute top-0 right-0 w-12 h-12 rounded-tr-3xl rounded-bl-3xl border-l border-b ${isHighlighted ? 'border-white/10 bg-white/5' : 'border-white/5 bg-white/[0.02]'}`}></div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BannerHero from '../components/BannerHero';
 export default function AboutUs() {
   const focusAreas = [
     {
@@ -24,7 +24,10 @@ export default function AboutUs() {
     }
   ];
 
-  return (
+  return (<>
+      
+      <BannerHero />
+
     <section className="relative bg-[#020617] text-white py-20 px-6 md:px-12 overflow-hidden">
       
       {/* Background Ambience */}
@@ -102,5 +105,5 @@ export default function AboutUs() {
 
       </div>
     </section>
-  );
+  </>);
 }

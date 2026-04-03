@@ -4,22 +4,22 @@ const data = [
   {
     title: 'Integrated Briquette Production Technology',
     desc: 'Eco-Energy delivers a fully integrated, all-in-one engineering solution that seamlessly bridges biomass carbonization, material mixing, and mechanical compression. By unifying these stages into a single high-efficiency system, we eliminate the need for fragmented machinery.',
-    img: '/your-local-image-1.png', // Replace with your local path
+    img: '/machine1.jpg', // Replace with your local path
   },
   {
     title: 'Affordable & Scalable for Entrepreneurs',
     desc: 'Designed with local impact in mind, Eco-Energy offers a low-cost, high-yield solution tailored specifically for small and medium enterprises. By lowering the barrier to entry, our system empowers individuals and cooperatives to launch their own production lines.',
-    img: '/your-local-image-2.png',
+    img: '/afforadable1.jpg',
   },
   {
     title: 'Environmental Sustainability & Waste Recycling',
     desc: `Eco-Energy creates a circular economy by transforming agricultural waste—such as husks, sawdust, and residues—into high-performance, clean-burning briquettes. By diverting waste from landfills, our system directly lowers greenhouse gas emissions.`,
-    img: '/your-local-image-3.png',
+    img: '/environement3.jpg',
   },
   {
     title: 'Job Creation & Economic Impact',
     desc: "Eco-Energy acts as a catalyst for regional industrialization by fostering a robust value chain. Our system creates a multi-tiered economic impact: from the precision engineering of machine manufacturing to the high-demand sector of briquette production.",
-    img: '/your-local-image-4.png',
+    img: '/job1.jpg',
   },
 ];
 

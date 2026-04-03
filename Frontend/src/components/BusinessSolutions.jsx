@@ -10,13 +10,13 @@ const data = [
     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
   },
   {
-    title: 'Growth Marketing',
-    desc: 'Boost your visibility and engagement through data-driven campaigns.',
+    title: 'Environmental Sustainability & Waste Recycling',
+    desc: `Eco-Energy creates a circular economy by transforming agricultural waste—such as husks, sawdust, and residues—into high-performance, clean-burning briquettes. By diverting waste from landfills and reducing reliance on traditional fuels, our system directly lowers greenhouse gas emissions and mitigates pollution. We aren't just processing waste; we are pioneering a cleaner energy future.`,
     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
   },
   {
-    title: 'Insights & Analytics',
-    desc: 'We provide deep insights to help you understand your audience and competitors better.',
+    title: 'Job Creation & Economic Impact',
+    desc: "Eco-Energy acts as a catalyst for regional industrialization by fostering a robust value chain. Our system creates a multi-tiered economic impact: from the precision engineering of machine manufacturing to the high-demand sector of briquette production and the subsequent logistics and retail networks. This ecosystem doesn't just build industry; it provides a sustainable pathway for youth employment and bolsters community-wide financial resilience.",
     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
   },
 ];

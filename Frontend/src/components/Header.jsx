@@ -23,11 +23,11 @@ function Header() {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex justify-center items-center space-x-2 group">
             <img
-              src="/public/ecoIcon.png"
+              src="/ecoIcon.png"
               className="w-12 h-13 text-green-600"
             />
             <span className="text-xl mb-4 font-bold text-gray-900 hidden sm:inline">
-              Eco<span className="text-green-600">Energy</span>
+              Eco<span className="text-green-600"><span className="text-red-800">-</span>Energy</span>
             </span>
           </Link>
 

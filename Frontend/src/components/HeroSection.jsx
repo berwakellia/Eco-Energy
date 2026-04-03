@@ -1,6 +1,3 @@
-import WaterEnergyWasste from "../../public/WaterEnergyWaste.png"
-import Machine from "../../public/Machine.jpg"
-import Sustainable from "../../public/Sustainable.png"
 export default function HeroSection() {
   return (
     <div className="relative bg-[#020617] text-white overflow-hidden min-h-screen flex flex-col justify-center items-center px-6">
@@ -28,7 +25,7 @@ export default function HeroSection() {
         {/* Card 1 */}
         <div className="flex items-center gap-4 px-8 py-6 border-b md:border-b-0 md:border-r border-white/10">
           <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-            <img src={Sustainable} className="w-10 h-10 bg-green-500/20 rounded-full"  />
+            <img src='/Sustainable.png' className="w-10 h-10 bg-green-500/20 rounded-full"  />
           </div>
           <div>
             <h2 className="text-xl font-semibold">100%</h2>
@@ -39,7 +36,7 @@ export default function HeroSection() {
         {/* Card 2 */}
         <div className="flex items-center gap-4 px-8 py-6 border-b md:border-b-0 md:border-r border-white/10">
           <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-            <img src={Machine} className="w-10 h-10 bg-green-500/20 rounded-full"  />
+            <img src='/Machine.jpg' className="w-10 h-10 bg-green-500/20 rounded-full"  />
           </div>
           <div>
             <h2 className="text-xl font-semibold">100%</h2>
@@ -50,7 +47,7 @@ export default function HeroSection() {
         {/* Card 3 */}
         <div className="flex items-center gap-4 px-8 py-6">
           <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-            <img src={WaterEnergyWasste} className="w-10 h-10 bg-green-500/20 rounded-full"  />
+            <img src='/WaterEnergyWaste.png' className="w-10 h-10 bg-green-500/20 rounded-full"  />
           </div>
           <div>
             <h2 className="text-xl font-semibold">100%</h2>

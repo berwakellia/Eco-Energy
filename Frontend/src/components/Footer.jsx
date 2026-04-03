@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-6">
           <h2 className="text-4xl md:text-5xl font-bold text-white opacity-80 mb-4">
-            EcoEnergy
+            Eco-Energy
           </h2>
         </div>
 

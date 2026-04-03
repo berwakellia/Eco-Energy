@@ -1,11 +1,11 @@
 export default function JoinGalaxy() {
   const avatars = [
-    "https://i.pravatar.cc/100?img=1",
-    "https://i.pravatar.cc/100?img=2",
-    "https://i.pravatar.cc/100?img=3",
-    "https://i.pravatar.cc/100?img=4",
-    "https://i.pravatar.cc/100?img=5",
-    "https://i.pravatar.cc/100?img=6",
+   
+    "/habiyambere.png",
+    "/berwa.png",
+    "/muhinka.png",
+    "/kamigisha.png",
+    
   ];
 
   return (

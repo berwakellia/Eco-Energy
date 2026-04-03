@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function BannerHero() {
 
-  // 🔥 Slides (image + content together)
+
   const slides = [
     {
       image: "/behindgirl.jpg",

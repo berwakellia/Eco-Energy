@@ -5,8 +5,8 @@ const data = [
     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
   },
   {
-    title: 'Brand Development',
-    desc: 'We build powerful brands that stand out and connect deeply with your audience.',
+    title: 'Affordable & Scalable for Entrepreneurs',
+    desc: 'Designed with local impact in mind, Eco-Energy offers a low-cost, high-yield solution tailored specifically for small and medium enterprises. By lowering the barrier to entry, our system empowers individuals and cooperatives to launch their own production lines with ease. We don’t just sell machinery; we provide an accessible gateway to entrepreneurship that scales alongside your ambition, driving sustainable economic growth from the ground up.',
     img: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-6521720_1280.png',
   },
   {

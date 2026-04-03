@@ -44,7 +44,9 @@ export default function BusinessSolutions() {
 
       {/* 3. Description */}
       <p className="z-10 mt-6 text-emerald-100/60 text-center max-w-2xl text-sm md:text-base leading-relaxed">
-        From branding to digital transformation, we craft strategies and solutions that launch your business into a new orbit of success.
+       Eco-Energy provides an integrated, affordable briquette production solution that transforms 
+       agricultural waste into clean fuel. The system reduces environmental impact, supports entrepreneurship, and creates sustainable
+        job opportunities, making it both an economic and ecological solution.
       </p>
 
       {/* 4. Responsive Card Grid */}

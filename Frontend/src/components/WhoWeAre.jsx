@@ -42,7 +42,7 @@ export default function WhoWeAre() {
   const arrowColors = ["#15803d", "#22c55e", "#fbbf24", "#3b82f6"];
 
   return (
-    <section className="py-16 px-6 md:px-12 lg:px-24 bg-slate-50 overflow-hidden">
+    <section className="py-16 px-6 md:px-12 lg:px-24 bg-slate-900 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         <div 

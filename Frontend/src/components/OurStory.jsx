@@ -63,12 +63,12 @@ export default function OurStory() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="py-20 px-6 md:px-16 bg-white overflow-hidden">
+    <section ref={containerRef} className="py-20 px-6 md:px-16 bg-[#14233a] overflow-hidden">
       <div className="max-w-6xl mx-auto">
         
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold tracking-[0.3em] text-green-600 uppercase mb-3">Our Origins</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-slate-900">The Journey of Eco-Energy</h3>
+          <h3 className="text-4xl md:text-5xl font-black text-slate-400">The Journey of Eco-Energy</h3>
           <div className="h-1.5 w-24 bg-green-500 mx-auto mt-6 rounded-full"></div>
         </div>
 

@@ -48,7 +48,7 @@ export default function Mission() {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 md:px-16 bg-white overflow-hidden relative">
+    <section ref={sectionRef} className="py-20 px-6 md:px-16 bg-slate-900 overflow-hidden relative">
       
       {/* Background Decorative Element: Animated Energy Ring */}
       <div 
@@ -60,7 +60,7 @@ export default function Mission() {
       <div className="max-w-5xl mx-auto relative z-10">
         <div 
           ref={cardRef}
-          className="bg-green-50 p-10 md:p-16 rounded-[2rem] border border-green-100 shadow-sm"
+          className="bg-green-200 p-10 md:p-16 rounded-[2rem] border border-green-100 shadow-sm"
         >
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             

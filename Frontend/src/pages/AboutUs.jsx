@@ -1,6 +1,7 @@
 import React from 'react';
 import BannerHero from '../components/BannerHero';
 import WhoWeAre from '../components/WhoWeAre';
+import Mission  from '../components/Mission';
 
 export default function AboutUs() {
   const focusAreas = [
@@ -109,5 +110,6 @@ export default function AboutUs() {
     </section>
     
     <WhoWeAre />
+    <Mission />
   </>);
 }

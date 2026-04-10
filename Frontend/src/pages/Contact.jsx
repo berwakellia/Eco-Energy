@@ -61,7 +61,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#022611] text-neutral-300 font-sans p-6 md:p-12 lg:p-20 flex items-center justify-center">
+    <div className="min-h-screen bg-[#04131d] text-neutral-300 font-sans p-6 md:p-12 lg:p-20 flex items-center justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 w-full max-w-screen-2xl">
 
         {/* ── Left Section ── */}

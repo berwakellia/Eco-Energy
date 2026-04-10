@@ -10,10 +10,10 @@ export default function TrialCTA() {
           {/* Left Side: Typography */}
           <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white tracking-tight">
-              Start Your 7-Day
+             Let’s build something together.
             </h2>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-white italic font-serif">
-              Free Trial
+             Ready to level up your project?
             </h2>
           </div>
 

@@ -1,11 +1,10 @@
 import { useState } from "react";
-// Changed Facebook to FacebookIcon and ensured Sparkles is consistent
 import { 
   Phone, 
   Mail, 
   MessageSquare, 
   Twitter, 
-  Facebook,       // ✅ Correct
+  Facebook,
   Instagram, 
   Linkedin, 
   Sparkles 
@@ -93,11 +92,15 @@ export default function Contact() {
           </div>
 
           <div className="bg-[#1b1a29] border border-[#2b2a3a] p-8 rounded-xl max-w-sm">
-            <span className="block text-sm font-medium text-neutral-50 mb-6">Follow us on social media</span>
+            <span className="block text-sm font-medium text-neutral-50 mb-6">
+              Follow us on social media
+            </span>
             <div className="flex gap-4">
-              {/* Updated icon mapping to use FacebookIcon */}
-              {[FacebookIcon, Twitter, Instagram, Linkedin].map((Icon, idx) => (
-                <div key={idx} className="bg-[#2b2a3a] p-3 rounded-xl cursor-pointer hover:bg-[#3b3a4a] transition-colors">
+              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#2b2a3a] p-3 rounded-xl cursor-pointer hover:bg-[#3b3a4a] transition-colors"
+                >
                   <Icon className="size-5 text-neutral-100" />
                 </div>
               ))}
@@ -109,12 +112,12 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className="space-y-8 lg:mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { label: "Full Name", name: "name", type: "text" },
-              { label: "Email Address", name: "email", type: "email" },
-              { label: "Phone Number", name: "phone", type: "tel" },
-              { label: "Company", name: "company", type: "text" },
-              { label: "Subject", name: "subject", type: "select" },
-              { label: "Subject With Search", name: "searchSubject", type: "text" },
+              { label: "Full Name",           name: "name",          type: "text"   },
+              { label: "Email Address",        name: "email",         type: "email"  },
+              { label: "Phone Number",         name: "phone",         type: "tel"    },
+              { label: "Company",              name: "company",       type: "text"   },
+              { label: "Subject",              name: "subject",       type: "select" },
+              { label: "Subject With Search",  name: "searchSubject", type: "text"   },
             ].map((field) => (
               <div key={field.name} className="relative">
                 {field.type === "select" ? (
@@ -126,6 +129,9 @@ export default function Contact() {
                   >
                     <option value="">{field.label}</option>
                     <option value="general">General Inquiry</option>
+                    <option value="support">Support</option>
+                    <option value="billing">Billing</option>
+                    <option value="other">Other</option>
                   </select>
                 ) : (
                   <>
@@ -146,6 +152,7 @@ export default function Contact() {
             ))}
           </div>
 
+          {/* Message */}
           <div className="relative">
             <textarea
               name="message"
@@ -160,15 +167,19 @@ export default function Contact() {
             </label>
           </div>
 
+          {/* Referrer */}
           <div className="space-y-4">
-            <span className="block text-sm font-medium text-neutral-50">How did you hear about us?</span>
+            <span className="block text-sm font-medium text-neutral-50">
+              How did you hear about us?
+            </span>
             <div className="space-y-3">
               {["Google Search", "Social Media", "Referral", "Other"].map((label) => (
                 <div key={label} className="flex items-center">
                   <input
                     type="radio"
                     name="referrer"
-                    value={label.toLowerCase()}
+                    value={label.toLowerCase().replace(" ", "-")}
+                    checked={form.referrer === label.toLowerCase().replace(" ", "-")}
                     className="size-4 bg-[#1b1a29] border-[#2b2a3a] text-[#8b5cf6] focus:ring-[#8b5cf6]"
                     onChange={handleChange}
                   />
@@ -178,21 +189,32 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Terms */}
           <div className="flex items-center">
             <input
               name="termsAgreed"
               type="checkbox"
+              checked={form.termsAgreed}
               className="size-4 rounded bg-[#1b1a29] border-[#2b2a3a] text-[#8b5cf6]"
               onChange={handleChange}
             />
             <label className="ml-3 text-sm text-neutral-400">
-              I agree to the <span className="underline">terms and conditions</span> and <span className="underline">privacy policy</span>.
+              I agree to the{" "}
+              <span className="underline cursor-pointer hover:text-neutral-200 transition-colors">
+                terms and conditions
+              </span>{" "}
+              and{" "}
+              <span className="underline cursor-pointer hover:text-neutral-200 transition-colors">
+                privacy policy
+              </span>.
             </label>
           </div>
 
+          {/* Submit */}
           <button
             type="submit"
-            className="inline-flex items-center gap-3 bg-[#8b5cf6] hover:bg-[#a78bfa] text-white font-medium py-3.5 px-10 rounded-full transition-all active:scale-[0.98]"
+            disabled={!form.termsAgreed}
+            className="inline-flex items-center gap-3 bg-[#8b5cf6] hover:bg-[#a78bfa] disabled:opacity-40 disabled:cursor-not-allowed text-white font-medium py-3.5 px-10 rounded-full transition-all active:scale-[0.98]"
           >
             Submit
             <Sparkles className="size-5" />

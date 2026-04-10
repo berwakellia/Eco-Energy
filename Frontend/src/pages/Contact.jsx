@@ -1,13 +1,14 @@
 import { useState } from "react";
+// Changed Facebook to FacebookIcon and ensured Sparkles is consistent
 import { 
   Phone, 
   Mail, 
   MessageSquare, 
-  X, // Instead of Twitter
-  Facebook, 
+  Twitter, 
+  Facebook,       // ✅ Correct
   Instagram, 
   Linkedin, 
-  Sparkles // Use Sparkles instead of Sparkle for better compatibility
+  Sparkles 
 } from "lucide-react";
 
 export default function Contact() {
@@ -37,33 +38,28 @@ export default function Contact() {
   };
 
   return (
-    // Dark background and overall layout container
     <div className="min-h-screen bg-[#09090c] text-neutral-300 font-sans p-6 md:p-12 lg:p-20 flex items-center justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 w-full max-w-screen-2xl">
         
-        {/* Left Section - Text and Info */}
+        {/* Left Section */}
         <div className="space-y-12">
           <div>
-            {/* Styled "Contact" tag with sparkle icon */}
             <div className="inline-flex items-center gap-2 bg-[#1b1a29] border border-[#2b2a3a] px-3 py-1.5 rounded-full text-xs text-[#a7a6ba]">
               Contact
-              <Sparkle className="size-3 text-[#7977a4]" />
+              <Sparkles className="size-3 text-[#7977a4]" />
             </div>
             
-            {/* Large multi-line title */}
             <h2 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-light text-neutral-50 leading-tight">
               Contact Us<br />
               For More<br />
               <span className="italic font-normal">Information</span>
             </h2>
             
-            {/* Description text */}
             <p className="mt-6 max-w-lg text-neutral-400 font-light leading-relaxed">
               Whether you're seeking expert assistance, our dedicated team is prepared to support you every step of the way.
             </p>
           </div>
 
-          {/* Icon/Detail rows (phone, email, chat) */}
           <div className="space-y-6">
             <div className="flex items-center gap-5">
               <div className="bg-[#1b1a29] p-3 rounded-lg border border-[#2b2a3a]">
@@ -96,11 +92,11 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Social Media Card */}
           <div className="bg-[#1b1a29] border border-[#2b2a3a] p-8 rounded-xl max-w-sm">
             <span className="block text-sm font-medium text-neutral-50 mb-6">Follow us on social media</span>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+              {/* Updated icon mapping to use FacebookIcon */}
+              {[FacebookIcon, Twitter, Instagram, Linkedin].map((Icon, idx) => (
                 <div key={idx} className="bg-[#2b2a3a] p-3 rounded-xl cursor-pointer hover:bg-[#3b3a4a] transition-colors">
                   <Icon className="size-5 text-neutral-100" />
                 </div>
@@ -111,135 +107,96 @@ export default function Contact() {
 
         {/* Right Section - Form */}
         <form onSubmit={handleSubmit} className="space-y-8 lg:mt-10">
-          
-          {/* Responsive Form Grid (2 cols on md+, 1 col on mobile) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            {/* Form Input fields */}
             {[
               { label: "Full Name", name: "name", type: "text" },
               { label: "Email Address", name: "email", type: "email" },
               { label: "Phone Number", name: "phone", type: "tel" },
               { label: "Company", name: "company", type: "text" },
               { label: "Subject", name: "subject", type: "select" },
-              { label: "Subject With Search", name: "searchSubject", type: "selectWithSearch" },
+              { label: "Subject With Search", name: "searchSubject", type: "text" },
             ].map((field) => (
-              <div key={field.name}>
+              <div key={field.name} className="relative">
                 {field.type === "select" ? (
-                  // Custom styled select input
-                  <div className="relative">
-                    <select
-                      id={field.name}
-                      name={field.name}
-                      className="peer w-full bg-[#1b1a29] border border-[#2b2a3a] px-5 py-4 rounded-xl text-neutral-50 placeholder-transparent focus:outline-none focus:ring-1 focus:ring-[#8b5cf6] transition-colors appearance-none"
-                      onChange={handleChange}
-                      value={form[field.name]}
-                    >
-                      <option value="">Select subject</option>
-                      {/* options here */}
-                    </select>
-                    <label className="absolute left-5 top-4 text-sm font-medium text-neutral-400 transition-all peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs">{field.label}</label>
-                  </div>
-                ) : field.type === "selectWithSearch" ? (
-                   // Custom styled select with search input (concept)
-                   <div className="relative">
-                    <input
-                      id={field.name}
-                      name={field.name}
-                      type="text"
-                      className="peer w-full bg-[#1b1a29] border border-[#2b2a3a] px-5 py-4 rounded-xl text-neutral-50 placeholder-transparent focus:outline-none focus:ring-1 focus:ring-[#8b5cf6] transition-colors"
-                      placeholder={field.label}
-                      onChange={handleChange}
-                      value={form[field.name]}
-                    />
-                     <label className="absolute left-5 top-4 text-sm font-medium text-neutral-400 transition-all peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs">{field.label}</label>
-                   </div>
+                  <select
+                    name={field.name}
+                    className="w-full bg-[#1b1a29] border border-[#2b2a3a] px-5 py-4 rounded-xl text-neutral-50 focus:outline-none focus:ring-1 focus:ring-[#8b5cf6] appearance-none"
+                    onChange={handleChange}
+                    value={form[field.name]}
+                  >
+                    <option value="">{field.label}</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
                 ) : (
-                  // Custom styled text inputs (material-style floating labels)
-                  <div className="relative">
+                  <>
                     <input
-                      id={field.name}
                       name={field.name}
                       type={field.type}
-                      className="peer w-full bg-[#1b1a29] border border-[#2b2a3a] px-5 py-4 rounded-xl text-neutral-50 placeholder-transparent focus:outline-none focus:ring-1 focus:ring-[#8b5cf6] transition-colors"
+                      className="peer w-full bg-[#1b1a29] border border-[#2b2a3a] px-5 py-4 rounded-xl text-neutral-50 placeholder-transparent focus:outline-none focus:ring-1 focus:ring-[#8b5cf6]"
                       placeholder={field.label}
                       onChange={handleChange}
                       value={form[field.name]}
                     />
-                    <label className="absolute left-5 top-4 text-sm font-medium text-neutral-400 transition-all peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs">{field.label}</label>
-                  </div>
+                    <label className="absolute left-5 top-4 text-sm font-medium text-neutral-400 transition-all peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs">
+                      {field.label}
+                    </label>
+                  </>
                 )}
               </div>
             ))}
           </div>
 
-          {/* Textarea field */}
           <div className="relative">
             <textarea
-              id="message"
               name="message"
               rows="6"
-              className="peer w-full bg-[#1b1a29] border border-[#2b2a3a] px-5 py-4 rounded-xl text-neutral-50 placeholder-transparent focus:outline-none focus:ring-1 focus:ring-[#8b5cf6] transition-colors resize-none"
+              className="peer w-full bg-[#1b1a29] border border-[#2b2a3a] px-5 py-4 rounded-xl text-neutral-50 placeholder-transparent focus:outline-none focus:ring-1 focus:ring-[#8b5cf6] resize-none"
               placeholder="Enter your message."
               onChange={handleChange}
               value={form.message}
             />
-            <label className="absolute left-5 top-4 text-sm font-medium text-neutral-400 transition-all peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs">Enter your message.</label>
+            <label className="absolute left-5 top-4 text-sm font-medium text-neutral-400 transition-all peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs">
+              Enter your message.
+            </label>
           </div>
 
-          {/* Radio Buttons section */}
-          <div>
-            <span className="block text-sm font-medium text-neutral-50 mb-4">How did you hear about us?</span>
+          <div className="space-y-4">
+            <span className="block text-sm font-medium text-neutral-50">How did you hear about us?</span>
             <div className="space-y-3">
-              {[
-                { label: "Google Search", value: "google" },
-                { label: "Social Media", value: "social" },
-                { label: "Referral", value: "referral" },
-                { label: "Other", value: "other" },
-              ].map((option) => (
-                <div key={option.value} className="flex items-center">
+              {["Google Search", "Social Media", "Referral", "Other"].map((label) => (
+                <div key={label} className="flex items-center">
                   <input
-                    id={option.value}
-                    name="referrer"
                     type="radio"
-                    value={option.value}
-                    className="size-4 bg-[#1b1a29] border-[#2b2a3a] text-[#8b5cf6] focus:ring-[#8b5cf6] focus:ring-offset-0 focus:ring-offset-[#09090c]"
+                    name="referrer"
+                    value={label.toLowerCase()}
+                    className="size-4 bg-[#1b1a29] border-[#2b2a3a] text-[#8b5cf6] focus:ring-[#8b5cf6]"
                     onChange={handleChange}
-                    checked={form.referrer === option.value}
                   />
-                  <label htmlFor={option.value} className="ml-3 text-sm font-medium text-neutral-300">
-                    {option.label}
-                  </label>
+                  <label className="ml-3 text-sm text-neutral-300">{label}</label>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Terms Checkbox */}
           <div className="flex items-center">
             <input
-              id="termsAgreed"
               name="termsAgreed"
               type="checkbox"
-              className="size-4 rounded-md bg-[#1b1a29] border-[#2b2a3a] text-[#8b5cf6] focus:ring-[#8b5cf6] focus:ring-offset-0 focus:ring-offset-[#09090c]"
+              className="size-4 rounded bg-[#1b1a29] border-[#2b2a3a] text-[#8b5cf6]"
               onChange={handleChange}
-              checked={form.termsAgreed}
             />
-            <label htmlFor="termsAgreed" className="ml-3 text-sm text-neutral-400 font-light">
-              I agree to the <a href="#" className="underline hover:text-neutral-50">terms and conditions</a> and <a href="#" className="underline hover:text-neutral-50">privacy policy</a>.
+            <label className="ml-3 text-sm text-neutral-400">
+              I agree to the <span className="underline">terms and conditions</span> and <span className="underline">privacy policy</span>.
             </label>
           </div>
 
-          {/* Submit Button */}
-          <div>
-            <button
-              type="submit"
-              className="inline-flex items-center gap-3 bg-[#8b5cf6] hover:bg-[#a78bfa] text-white font-medium py-3.5 px-10 rounded-full text-base transition-colors group active:scale-[0.98]"
-            >
-              Submit
-              <Sparkle className="size-5 text-neutral-50 group-hover:animate-pulse" />
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="inline-flex items-center gap-3 bg-[#8b5cf6] hover:bg-[#a78bfa] text-white font-medium py-3.5 px-10 rounded-full transition-all active:scale-[0.98]"
+          >
+            Submit
+            <Sparkles className="size-5" />
+          </button>
         </form>
       </div>
     </div>

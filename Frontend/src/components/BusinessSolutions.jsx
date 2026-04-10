@@ -34,6 +34,7 @@ const SolutionCard = ({ item, isHighlighted }) => {
 
     return () => clearInterval(timer);
   }, [item.img.length]);
+  
 
   return (
     <div className={`group relative flex flex-col h-full p-6 rounded-3xl border transition-all duration-500 hover:scale-[1.02] ${
